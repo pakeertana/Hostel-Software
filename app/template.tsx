@@ -3,6 +3,7 @@ import "@/styles/style.css";
 import LeaveApplicationForm from "./LeaveApplicationForm";
 import { useEffect, useRef, useState } from "react";
 import Features from "./features";
+import Contact from "./contact";
 export default function Template() {
 
   const [isVisible,setIsVisible] = useState(false);
@@ -296,6 +297,7 @@ export default function Template() {
                 </div>
               </div>
             </section>
+            <Contact/>
             {/* Change the colour #f8fafc to match the previous section colour */}
             <svg className="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
               <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
