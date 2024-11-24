@@ -313,26 +313,13 @@ export default function Template() {
                 </g>
               </g>
             </svg>
-            <section className="container mx-auto text-center py-6 mb-12">
-              <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-                Call to Action
-              </h2>
-              <div className="w-full mb-4">
-                <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
-              </div>
-              <h3 className="my-4 text-3xl leading-tight">
-                Main Hero Message to sell yourself!
-              </h3>
-              <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Action!
-              </button>
-            </section>
             {/*Footer*/}
-            <footer className="bg-white">
+            <footer className="gradient">
               <div className="container mx-auto px-8">
                 <div className="w-full flex flex-col md:flex-row py-6">
-                  <div className="flex-1 mb-6 text-black">
-                    <a className="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                  <div className="flex-1 mb-6 text-white">
+                    <a className="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                    
                       {/*Icon from: http://www.potlabicons.com/ */}
                       <svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
                         <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
@@ -340,63 +327,81 @@ export default function Template() {
                       </svg>
                       LANDING
                     </a>
+                    <div className="mt-2 inline-block mx-2 md:block md:mr-0">
+                        <button className="details social-icon"><a href="#" className="no-underline hover:underline text-black hover:text-pink-500">LogIn</a>
+                      </button></div>
+                    </div>
+                     <div className="flex-1">
+                    <p className="uppercase text-underline text-white md:mb-6">Quick links</p>
+                    <ul className="list-reset  mb-6">
+                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">FAQ</a>
+                      </li>
+                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">Help</a>
+                      </li>
+                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">Support</a>
+                      </li>
+                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">Leave Application</a>
+                      </li>
+                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">History</a>
+                      </li>
+                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">Notification</a>
+                      </li>
+                      
+                    </ul>
                   </div>
                   <div className="flex-1">
-                    <p className="uppercase text-gray-500 md:mb-6">Links</p>
+                    <p className="uppercase text-underline text-white md:mb-6">Legal</p>
                     <ul className="list-reset mb-6">
                       <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">Terms</a>
                       </li>
                       <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">Privacy</a>
                       </li>
                       <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">Anti ragging</a>
                       </li>
                     </ul>
                   </div>
                   <div className="flex-1">
-                    <p className="uppercase text-gray-500 md:mb-6">Legal</p>
-                    <ul className="list-reset mb-6">
-                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+                    <p className="uppercase text-underline text-white md:mb-6">Social</p>
+                    <ul className="flex list-reset mb-6 space-x-4">
+                      <li className="mt-2 inline-block mr-0 md:block md:mr-0">
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-white"><img src="fb.svg" width="20px" className="social-icon"/></a>
                       </li>
                       <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex-1">
-                    <p className="uppercase text-gray-500 md:mb-6">Social</p>
-                    <ul className="list-reset mb-6">
-                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-white"><img src="INSTA.svg" width="20px" className="social-icon"/></a>
                       </li>
                       <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
-                      </li>
-                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-white"><img src="YB.svg" width="20px" className="social-icon"/></a>
                       </li>
                     </ul>
                   </div>
                   <div className="flex-1">
-                    <p className="uppercase text-gray-500 md:mb-6">Company</p>
+                    <p className="uppercase text-underline text-white md:mb-6">Contact Us</p>
                     <ul className="list-reset mb-6">
                       <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+                        <a href="#" className="no-underline hover:underline text-gray-300 hover:text-pink-300">AJ Institute of Engineering & Technology,
+NH-66, Kottara Chowki,
+Mangaluru – 575006, Karnataka, India</a>
                       </li>
                       <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
-                      </li>
-                      <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                        <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                        <a href="mailto:Hostelmanagement@ajiet.edu.in" className="no-underline hover:underline text-gray-300 hover:text-pink-300">
+                        <i className="far fa-envelope">
+                        </i>
+                        hostelmanagement@ajiet.edu.in
+                        </a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <a href="https://www.freepik.com/free-photos-vectors/background" className="text-gray-500">Background vector created by freepik - www.freepik.com</a>
             </footer>
             <script src="/script.js"></script>
             <script src="/script2.js"></script>
