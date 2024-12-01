@@ -38,7 +38,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       callbacks: {
         jwt({ token, user }) {
           if(user) 
-          token.user = {
+          token = {
             name: user.name,
             email: user.email,
             image: user.image,
@@ -50,9 +50,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             return token
         },
         session({ session, token }) {
-          session.user.role = (token as JWT).user.role;
-          session.user.departmentName = (token as JWT).user.departmentName;
-          session.user.phNo = (token as JWT).user.phNo;
+          session.user.role = (token as JWT).role as string;
+          session.user.departmentName = (token as JWT).departmentName as string;
+          session.user.phNo = (token as JWT).phNo as number;
           return session
         }
       }
