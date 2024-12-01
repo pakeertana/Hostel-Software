@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { LogIn } from "@/lib/auth-action";
+import { LogIn, signup } from "@/lib/auth-action";
 
-export default function SignIn(){
+export default function SignUp(){
           return (
             <div>
               <h1>Sign Up</h1>
@@ -11,11 +11,19 @@ export default function SignIn(){
                    async (e) =>{
                     e.preventDefault()
                     let data = Object.fromEntries(new FormData(e.currentTarget).entries())
-                    let {email,password} = data
-                     await LogIn({email,password});
+                    data.role="student";
+                     await signup(data);
                     }
                 
               }>
+                <div>
+                    <label htmlFor ="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                <div>
+                    <label htmlFor="usn" >USN:</label>
+                    <input type="text" id="usn" name="usn" placeholder="Your USN" required />
+                </div>
                 <div>
                   <label htmlFor="email">Email:</label>
                   <input
@@ -32,11 +40,23 @@ export default function SignIn(){
                   <input
                     type="password"
                     id="password"
-                    name="password"
+                    name="hashedPassword"
                     placeholder="Your Password"
                     // onChange={handleChange}
                     required
                   />
+                </div>
+                <div>
+                    <label htmlFor="image" >Image:</label>
+                    <input type="text" id="image" name="image" required />
+                </div>
+                <div>
+                    <label htmlFor="phoneno" >Phone Number:</label>
+                    <input type="text" id="phoneno" name="phNo" required />
+                </div>
+                <div>
+                    <label htmlFor="department" >Department:</label>
+                    <input type="text" id="department" name="departmentName" required />
                 </div>
                 <button type="submit">Signup</button>
               </form>

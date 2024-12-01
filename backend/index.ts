@@ -22,15 +22,15 @@ async function connect() {
 }
 
 // Function to create a new user
-export async function createUser(name: string, usn: string, email: string, hashedPassword: string, image: string, phNo: number,departmentName: string,role:string) {
+export async function createUser(name: string, usn: string, email: string, hashedPassword: string, image: string, phNo: number,role:string,departmentName: string) {
   if (!email || !hashedPassword) {
     return { success: false, message: "Email and password are required" };
   }
-
-  if (await getUser(email)) {
+  
+  if ((await getUser(email)).data) {
     return { success: false, message: "User already exists" };
   }
-
+  
   try {
     hashedPassword = await bcrypt.hashSync(hashedPassword, 10);
     // Connect to the database
@@ -45,6 +45,7 @@ export async function createUser(name: string, usn: string, email: string, hashe
         hashedPassword,
         image,
         phNo,
+        role,
         departmentName
     });
 
